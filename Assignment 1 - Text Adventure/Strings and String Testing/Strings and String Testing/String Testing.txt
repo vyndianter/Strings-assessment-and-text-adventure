@@ -1,0 +1,17 @@
+test 1	Constructor						Test Successful!
+test 2	Compare (true)						Test Successful!
+test 3	Compare (false)						Test Successful!
+test 4	length							Test Successful!
+test 5	Index							Test Successful!
+test 6	Append							Test Successful!
+test 7	Prepend							Test Successful!
+test 8	All Upper Case						Test Successful!
+test 9	All Lower Case						Test Successful!
+test 10	Finding a SubString					Test Successful!
+test 11	Finding a SubString from a certain index (True)		Test Successful!
+test 12	Finding a SubString from a certain index (False)	Test Successful!
+test 13	Replacing a SubString					Test Successful!
+Successful 100% of the time
+
+
+
