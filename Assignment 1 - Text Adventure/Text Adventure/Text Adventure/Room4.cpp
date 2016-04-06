@@ -20,9 +20,10 @@ void Room4::command(MyString input, Player & player)
 	{
 		if (m_enemies.size() > 0)
 		{
+			//ehhhh, no indication thats what you need to attack
 			if (input.toLower().subString("orc raid leader"))
 			{
-				m_enemies[0]->Damage(&player);
+				m_enemies[0]->Damage(player);
 				if (m_enemies[0]->ifDead())
 				{
 					m_enemies.erase(m_enemies.begin(), m_enemies.begin() + 1);

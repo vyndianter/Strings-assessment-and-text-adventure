@@ -1,5 +1,5 @@
 #include "creature.h"
-
+#include "Player.h"
 Creature::Creature()
 {
 }
@@ -12,13 +12,13 @@ void Creature::SetPlayerName(MyString & name)
 {
 	m_name = name;
 }
+//no need
+//MyString & Creature::GetPlayerName()
+//{
+//	return m_name;
+//}
 
-MyString & Creature::GetPlayerName()
-{
-	return m_name;
-}
-
-void Creature::Damage(Creature * enemy)
+void Creature::Damage(Player& enemy)
 {
 	if (ifDead())
 	{
@@ -27,9 +27,10 @@ void Creature::Damage(Creature * enemy)
 	else
 	{
 		std::cout << m_name;
-		std::cout << " took " << enemy->GetDamage();
-		std::cout << " damage from " << enemy->GetPlayerName() << '\n';
-		m_health -= enemy->GetDamage();
+		std::cout << " took " << enemy.GetDamage();
+		//changed to getname instead of player getname
+		std::cout << " damage from " << enemy.GetName() << '\n';
+		m_health -= enemy.GetDamage();
 		if (m_health <= 0)
 		{
 			m_health = 0;
@@ -37,13 +38,13 @@ void Creature::Damage(Creature * enemy)
 		} 
 		else
 		{ 
-			std::cout << enemy->GetPlayerName();
+			std::cout << enemy.GetName();
 			std::cout << " took " << m_damage;
 			std::cout << " damage from " << m_name << '\n';
-			enemy->GetHealth() -= m_damage;
-			if (enemy->GetHealth() <= 0)
+			enemy.GetHealth() -= m_damage;
+			if (enemy.GetHealth() <= 0)
 			{
-				enemy->GetHealth() = 0;
+				enemy.GetHealth() = 0;
 				std::cout << "You Died! Game Over!\n";
 				system("PAUSE");
 			}

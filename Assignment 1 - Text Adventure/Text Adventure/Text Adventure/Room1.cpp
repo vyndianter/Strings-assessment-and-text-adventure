@@ -14,7 +14,7 @@ Room1::~Room1()
 
 void Room1::command(MyString input, Player& player)
 {
-	
+	//make more clear what you need to type to attack
 	std::cout << "What will you do? ('Attack' or 'move (up, down, left or right)')\n";
 	if (input.toLower().subString("attack") != nullptr)
 	{
@@ -22,7 +22,7 @@ void Room1::command(MyString input, Player& player)
 		{
 			if (input.toLower().subString("goblin"))
 			{
-				m_enemies[0]->Damage(&player);
+				m_enemies[0]->Damage(player);
 				if (m_enemies[0]->ifDead())
 				{
 					m_enemies.erase(m_enemies.begin(), m_enemies.begin() + 1);
@@ -43,7 +43,7 @@ void Room1::command(MyString input, Player& player)
 		if (input.toLower().subString("up") != nullptr)
 		{
 			player.getLocation() = 2;
-			display();
+			player.display();
 		}
 		else if (input.toLower().subString("down") != nullptr)
 		{
@@ -63,6 +63,7 @@ void Room1::command(MyString input, Player& player)
 
 int & Room1::getLocation(int & location)
 {
+	//Get rid of all of these, no need for them.
 	return location;
 }
 

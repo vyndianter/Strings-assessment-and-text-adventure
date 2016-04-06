@@ -1,10 +1,11 @@
 #pragma once
-#include "Creature.h"
-
+//include player instead of creature
+#include "Player.h"
 class Orc : public Creature
 {
 public:
 	Orc();
 	~Orc();
-	virtual void Damage(Creature* enemy);
+	//changed to player& instead of character*
+	virtual void Damage(Player& enemy);
 };

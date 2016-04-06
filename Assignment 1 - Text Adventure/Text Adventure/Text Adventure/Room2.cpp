@@ -22,7 +22,7 @@ void Room2::command(MyString input, Player & player)
 		{
 			if (input.toLower().subString("orc"))
 			{
-				m_enemies[0]->Damage(&player);
+				m_enemies[0]->Damage(player);
 				if (m_enemies[0]->ifDead())
 				{
 					m_enemies.erase(m_enemies.begin(), m_enemies.begin() + 1);

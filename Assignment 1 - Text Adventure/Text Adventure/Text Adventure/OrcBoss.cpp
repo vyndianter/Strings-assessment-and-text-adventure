@@ -1,5 +1,5 @@
 #include "OrcBoss.h"
-
+#include "Player.h"
 
 
 OrcBoss::OrcBoss()
@@ -12,10 +12,14 @@ OrcBoss::OrcBoss()
 OrcBoss::~OrcBoss()
 {
 }
-
-void OrcBoss::Damage(Creature * enemy)
+//changed to player& instead of character*
+void OrcBoss::Damage(Player& enemy)
 {
 		Orc::Damage(enemy);
+		if (m_health <= 0) {
+			//allowing this
+			enemy.changeKey();
+		}
 }
 
 

@@ -2,24 +2,28 @@
 #include "Creature.h"
 #include "Map.h"
 
-
+class Map;
 class Player : public Creature
 {
 public:
-
-	Player();
+	//added parameter to make more sense
+	Player(MyString name);
 	~Player();
 	
-	virtual void Damage(Creature* enemy);
+	virtual void Damage(Player& enemy);
 
 	void command(MyString input);
 
+	//changed alittle
 	int& getLocation();
 
 	virtual int& GetHealth();
-
-	virtual MyString GetPlayerName(MyString input);
-
+	//no need
+	/*virtual MyString GetPlayerName(MyString input);*/
+	//made a display function to be used, move to .cpp
+	void display() {
+		m_map.display();
+	};
 	void changeKey();
 	bool returnKey();
 

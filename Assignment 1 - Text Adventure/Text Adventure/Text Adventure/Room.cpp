@@ -24,13 +24,5 @@ void Room::display()
 	}
 }
 
-void Room::firstDisplay()
-{
-}
-
-void Room::secondDisplay()
-{
-}
-
 
 

@@ -1,4 +1,5 @@
 #include "Orc.h"
+
 Orc::Orc()
 {
 	m_name = "Orc";
@@ -9,8 +10,8 @@ Orc::Orc()
 Orc::~Orc()
 {
 }
-
-void Orc::Damage(Creature * enemy)
+//changed to player& instead of character*
+void Orc::Damage(Player& enemy)
 {
 	Creature::Damage(enemy);
 }

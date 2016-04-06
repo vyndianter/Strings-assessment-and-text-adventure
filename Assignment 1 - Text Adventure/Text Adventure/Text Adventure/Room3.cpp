@@ -23,7 +23,7 @@ void Room3::command(MyString input, Player & player)
 		{
 			if (input.toLower().subString("goblin"))
 			{
-				m_enemies[0]->Damage(&player);
+				m_enemies[0]->Damage(player);
 				if (m_enemies[0]->ifDead())
 				{
 					m_enemies.erase(m_enemies.begin(), m_enemies.begin() + 1);
@@ -31,7 +31,7 @@ void Room3::command(MyString input, Player & player)
 			}
 			else if (input.toLower().subString("orc"))
 			{
-				m_enemies[0]->Damage(&player);
+				m_enemies[0]->Damage(player);
 				if (m_enemies[0]->ifDead())
 				{
 					m_enemies.erase(m_enemies.begin(), m_enemies.begin() + 1);

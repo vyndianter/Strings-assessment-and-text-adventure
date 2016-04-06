@@ -1,6 +1,6 @@
 #pragma once
 #include "MyString.h"
-
+class Player;
 class Creature
 {
 public:
@@ -9,9 +9,10 @@ public:
 	~Creature();
 
 	void SetPlayerName(MyString& name);
-	MyString& GetPlayerName();
+	//no need
+	/*MyString& GetPlayerName();*/
 
-	virtual void Damage(Creature* enemy);
+	virtual void Damage(Player& enemy);
 
 	int GetDamage();
 

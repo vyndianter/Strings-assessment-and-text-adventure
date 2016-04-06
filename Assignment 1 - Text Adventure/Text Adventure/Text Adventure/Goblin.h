@@ -1,11 +1,10 @@
 #pragma once
-#include "Creature.h"
-
+#include "Player.h"
 class Goblin : public Creature
 {
 public:
 	Goblin();
 	~Goblin();
-	virtual void Damage(Creature* enemy);
+	virtual void Damage(Player& enemy);
 
 };

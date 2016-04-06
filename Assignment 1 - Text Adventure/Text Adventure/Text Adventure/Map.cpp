@@ -4,7 +4,8 @@
 #include "Room2.h"
 #include "Room3.h"
 #include "Room4.h"
-
+#include "Room.h"
+#include "Player.h"
 Map::Map()
 {
 	m_locations.push_back(new Spawn());
@@ -26,9 +27,14 @@ void Map::command(MyString input, Player & player)
 	m_locations[m_location]->command(input, player);
 }
 
+void Map::display()
+{
+	m_locations[m_location]->display();
+}
+
 int& Map::getLocation()
 {
-	return m_locations[m_location]->getLocation(m_location);
+	return m_location;
 }
 
 

@@ -1,8 +1,10 @@
 #include "Player.h"
-#include "Map.h"
 
-Player::Player()
+
+Player::Player(MyString name)
 {
+	//made player have to have name, makes more sense
+	m_name = name;
 	m_damage = 18;
 	m_health = 100;
 	m_key = false;
@@ -12,7 +14,7 @@ Player::~Player()
 {
 }
 
-void Player::Damage(Creature * enemy)
+void Player::Damage(Player& enemy)
 {
 	
 	Creature::Damage(enemy);
@@ -32,11 +34,11 @@ int & Player::GetHealth()
 {
 	return Creature::GetHealth();
 }
-
-MyString Player::GetPlayerName(MyString input)
-{
-	return Creature::GetPlayerName();
-}
+//no need
+//MyString Player::GetPlayerName(MyString input)
+//{
+//	return Creature::GetPlayerName();
+//}
 
 void Player::changeKey()
 {

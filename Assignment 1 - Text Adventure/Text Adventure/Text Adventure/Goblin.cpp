@@ -11,7 +11,7 @@ Goblin::~Goblin()
 {
 }
 
-void Goblin::Damage(Creature * enemy)
+void Goblin::Damage(Player& enemy)
 {
 	if (rand() % 15 == 0)
 	{

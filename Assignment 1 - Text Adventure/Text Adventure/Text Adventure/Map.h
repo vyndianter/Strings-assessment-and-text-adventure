@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-#include "Room.h"
-
-
+class Room;
+class MyString;
+class Player;
 class Map
 {
 public:
@@ -11,7 +11,8 @@ public:
 	~Map();
 
 	void command(MyString input, Player& player);
-
+	//to call from location, move to .cpp
+	void display();
 	int& getLocation();
 
 protected:
