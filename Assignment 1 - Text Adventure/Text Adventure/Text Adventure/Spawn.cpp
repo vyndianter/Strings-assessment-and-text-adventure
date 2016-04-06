@@ -36,10 +36,6 @@ void Spawn::command(MyString input, Player& player)
 	}
 }
 
-int & Spawn::getLocation(int& location)
-{
-	return location;
-}
 
 void Spawn::firstDisplay()
 {

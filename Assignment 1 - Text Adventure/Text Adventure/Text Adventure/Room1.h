@@ -11,7 +11,7 @@ public:
 
 	void command(MyString input, Player& player);
 
-	virtual int& getLocation(int& location);
+
 
 	void firstDisplay();
 	void secondDisplay();

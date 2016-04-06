@@ -57,10 +57,6 @@ void Room4::command(MyString input, Player & player)
 	}
 }
 
-int & Room4::getLocation(int & location)
-{
-	return location;
-}
 
 void Room4::firstDisplay()
 {

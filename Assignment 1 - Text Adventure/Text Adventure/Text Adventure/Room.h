@@ -14,7 +14,7 @@ public:
 	virtual void command(MyString input, Player& player) = 0;
 	
 	//Get rid of all of these, no need for them.
-	virtual int& getLocation(int& location) = 0;
+
 
 	void display();
 

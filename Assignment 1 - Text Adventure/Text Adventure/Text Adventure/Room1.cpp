@@ -61,11 +61,6 @@ void Room1::command(MyString input, Player& player)
 	}
 }
 
-int & Room1::getLocation(int & location)
-{
-	//Get rid of all of these, no need for them.
-	return location;
-}
 
 void Room1::firstDisplay()
 {
